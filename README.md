@@ -1,2 +1,0 @@
-# SysadminScripts
-Scripts for Sysadmins
