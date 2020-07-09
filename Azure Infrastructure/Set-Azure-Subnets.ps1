@@ -1,17 +1,17 @@
-#Replace parameters Name and Address Fix before running the script
+#Replace parameters Name and IP Range before running the script
 $backendSubnetConfig = New-AzVirtualNetworkSubnetConfig `
   -Name ENV-PRD-Subnet `
-  -AddressPrefix 172.22.1.0/24
+  -AddressPrefix XX.XX.XX.XX/24
 
 $agSubnetConfig = New-AzVirtualNetworkSubnetConfig `
   -Name ENV-PRD-WebLayer `
-  -AddressPrefix 172.22.2.0/24
+  -AddressPrefix XX.XX.XX.XX/24
 
 New-AzVirtualNetwork `
   -ResourceGroupName prdresourcegroup `
   -Location eastus `
   -Name ENV-PRD-Vnet `
-  -AddressPrefix 172.22.0.0/16 `
+  -AddressPrefix XX.XX.XX.XX/16 `
   -Subnet $backendSubnetConfig, $agSubnetConfig
 
 New-AzPublicIpAddress `
